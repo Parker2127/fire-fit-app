@@ -5,3 +5,8 @@
 *{
   font-family: "Poppins", sans-serif;
 }
+
+span{
+font-family: inherit; /* any style that is set to the parent will be inherited by span */ 
+font-weight: inherit; 
+}
