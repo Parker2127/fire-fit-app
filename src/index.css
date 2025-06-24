@@ -10,3 +10,12 @@ span{
 font-family: inherit; /* any style that is set to the parent will be inherited by span */ 
 font-weight: inherit; 
 }
+
+.fireTorch {
+  box-shadow : 3px 3px 0 0 #FF5C00;
+}
+
+.fireTorch:hover {
+  transform : translate(-3px, -3px);
+  box-shadow : 6px 6px 0 0 #FF5C00;
+}
