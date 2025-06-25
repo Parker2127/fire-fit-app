@@ -17,6 +17,8 @@ function Header(props){
 }
 
 export default function Generator() {
+
+  let showModal = true;
   return (
    <SectionWrapper header={"generate your workout"} title= {['Enter', 'The', 'Dragon']}> {/* adding header for the use case of banners */}
      
@@ -39,12 +41,15 @@ export default function Generator() {
 
      <Header index={'02'} title="Unleash the fury" description="Select the muscles you want to set ablaze"/>
 
-     <div className='bg-slate-950 py-3 border border-solid border-orange-600 rounded-lg'>
-        {/*Code to add the buttons using object mapping  */}
-
-        <p>Select the dragon eggs to crack</p>
-        <i className="fa-solid fa-caret-down"></i>
-      
+     <div className='bg-slate-950 p-3 border border-solid border-orange-600 rounded-lg'>
+        {/*Code to add the dropdown */}
+         <div className='relative flex items-center justify-center'>
+            <p>Select the dragon eggs to crack</p>
+            <i className="fa-solid absolute right-3 top-1/2  -translate-y-1/2 fa-caret-down"></i>
+         </div>
+         {showModal && (
+            <div>modal</div>
+         )}
      </div>
 
      
