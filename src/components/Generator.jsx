@@ -21,14 +21,18 @@ export default function Generator() {
    <SectionWrapper header={"generate your workout"} title= {['Enter', 'The', 'Dragon']}> {/* adding header for the use case of banners */}
      <Header index={'01'} title="Pick your fire" description="Select the dragon you want to slay"/>
 
-     {/*Code to add the buttons using object mapping  */}
+     <div className='grid  grid-cols-2 sm:grid-cols-4 gap-4'>
+        {/*Code to add the buttons using object mapping  */}
 
-     {Object.keys(WORKOUTS).map((type, typeIndex)=>{
-        return (<button key= {typeIndex}>
-            <p> {type} </p>
-        </button>
-        )
-     })}
+        {Object.keys(WORKOUTS).map((type, typeIndex)=>{
+            return (<button className='bg-slate-950 border border-orange-600 py-4 rounded-lg'  key= {typeIndex}>
+                <p> {type} </p>
+            </button>
+            )
+        })}
+     </div>
+
+     
 
    </SectionWrapper>  /* Anything wrapped between the SectionWrapper component { parent tag } are considered to be children */
   )
