@@ -63,7 +63,15 @@ export default function Generator() {
             <i className="fa-solid absolute right-3 top-1/2  -translate-y-1/2 fa-caret-down"></i>
          </button>
          {showModal && (
-            <div>modal</div>
+            <div className='flex flex-col p-3'>
+                 {(fire === 'individual' ? WORKOUTS[fire] : Object.keys(WORKOUTS[fire])).map((muscleGroup, muscleGroupIndex) => {
+                    return (
+                        <button className='hover:text-orange-600'     key={muscleGroupIndex} >
+                            <p className='uppercase'>{muscleGroup.replaceAll('_', " ")}</p>
+                        </button>
+                    )
+                 } )}
+            </div>
          )}
      </div>
 
