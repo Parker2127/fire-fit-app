@@ -19,6 +19,9 @@ function Header(props){
 export default function Generator() {
   return (
    <SectionWrapper header={"generate your workout"} title= {['Enter', 'The', 'Dragon']}> {/* adding header for the use case of banners */}
+     
+      {/*--------------------------------------  HEADER 01 ------------------------------------------------------- */}
+
      <Header index={'01'} title="Pick your fire" description="Select the dragon you want to slay"/>
 
      <div className='grid  grid-cols-2 sm:grid-cols-4 gap-4'>
@@ -30,6 +33,18 @@ export default function Generator() {
             </button>
             )
         })}
+     </div>
+
+     {/*--------------------------------------  HEADER 02 ------------------------------------------------------- */}
+
+     <Header index={'02'} title="Unleash the fury" description="Select the muscles you want to set ablaze"/>
+
+     <div className=''>
+        {/*Code to add the buttons using object mapping  */}
+
+        <p>Select the dragon eggs to crack</p>
+        <i className="fa-solid fa-caret-down"></i>
+      
      </div>
 
      
