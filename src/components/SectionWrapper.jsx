@@ -12,7 +12,9 @@ export default function SectionWrapper(props) {
                     {title[0]} {title[1]} <span className='uppercase text-orange-600'>{title[2]}</span>
                 </h2>     {/* using span so that we can style each word in the title separately */}
             </div>
-            {children}
+            <div className='max-w-[800px] w-full flex flex-col mx-auto gap-10'>
+                {children}
+            </div>
         </section>
     )
 
