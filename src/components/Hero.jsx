@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Hero() {
   return (
-    <div className='min-h-screen flex flex-col gap-10 items-center justify-center text-center max-w-[800px] w-full mx-auto'> {/* This just makes all the elements move to the center */}
+    <div className='min-h-screen flex flex-col gap-10 items-center justify-center text-center max-w-[800px] w-full mx-auto p-4'> {/* This just makes all the elements move to the center */}
         <div className='flex flex-col gap-4'>   {/* using div to group p and h1, to make them look closer together */}
             <p> IT'S TIME TO GET </p>
             <h1 className= 'uppercase font-semi text-4xl sm:test-5xl  md:text-6xl large:text-7xl'> FIRED <span className='text-orange-700 font-medium'> UP </span></h1>     {/* Add fire animation next to fired up later */}
