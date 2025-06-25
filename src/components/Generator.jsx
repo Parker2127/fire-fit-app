@@ -39,7 +39,7 @@ export default function Generator() {
 
      <Header index={'02'} title="Unleash the fury" description="Select the muscles you want to set ablaze"/>
 
-     <div className=''>
+     <div className='bg-slate-950 py-3 border border-solid border-orange-600 rounded-lg'>
         {/*Code to add the buttons using object mapping  */}
 
         <p>Select the dragon eggs to crack</p>
