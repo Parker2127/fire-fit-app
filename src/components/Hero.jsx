@@ -10,7 +10,7 @@ export default function Hero() {
       <p className='text-sm md:text-base font-medium'> I am insanely getting <span className='text-orange-700 font-medium'>fired up</span>, no one can stop me, I believe in myself and I am ready to tackle anything that comes in my way. It is <span className='text-orange-700 font-medium'>do or die</span> and I am definitely doing it.</p>
       {/* Adding span will let us style the test inside span separately*/}
 
-      <button className='px-4 py-4 rounded-md border-[2px] bg-slate-950 border-orange-700 border-solid fireTorch duration:200'> <p> Accept and Begin </p></button>
+      <button className='px-4 py-4 rounded-md border-[2px] bg-slate-950 border-orange-700 border-solid fireTorch duration:200'> <p> Light the torch </p></button>
     </div>
   )
 }

@@ -21,7 +21,7 @@ export default function Generator() {
     const [showModal, setShowModal] = useState(false)
     const [fire, setFire] = useState('individual')
     const [muscles, setMuscles] = useState('individual')
-    const [goals, setGoals] = useState('strength_power')
+    const [goal, setGoal] = useState('strength_power')
 
 //   let showModal = false;
 
@@ -78,8 +78,8 @@ export default function Generator() {
             return (
 
                  <button onClick= {() => {
-                setFire(scheme)
-            }} className={'bg-slate-950 border duration-200 hover:border-orange-800 py-4 rounded-lg ' + (scheme === fire ? 'border-orange-800' : 'border-orange-600')} key={schemeIndex}>
+                setGoal(scheme)
+            }} className={'bg-slate-950 border duration-200 hover:border-orange-800 py-4 rounded-lg ' + (scheme === goal ? 'border-orange-800' : 'border-orange-600')} key={schemeIndex}>
                 <p className='capitalize'> {scheme.replaceAll('_', " ")} </p>
             </button>
             )
