@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import SectionWrapper from './SectionWrapper'
-import { WORKOUTS } from '../utils/fire'
+import { SCHEMES, WORKOUTS } from '../utils/fire'
 
 
 function Header(props){
@@ -19,6 +19,9 @@ function Header(props){
 export default function Generator() {
 
     const [showModal, setShowModal] = useState(false)
+    const [fire, setFire] = useState('individual')
+    const [muscles, setMuscles] = useState('individual')
+    const [goals, setGoals] = useState('strength_power')
 
 //   let showModal = false;
 
@@ -37,9 +40,14 @@ export default function Generator() {
         {/*Code to add the buttons using object mapping  */}
 
         {Object.keys(WORKOUTS).map((type, typeIndex)=>{
-            return (<button className='bg-slate-950 border border-orange-600 duration-200 hover:border-orange-800 py-4 rounded-lg'  key= {typeIndex}>
+            return (
+            
+            <button onClick= {() => {
+                setFire(type)
+            }} className={'bg-slate-950 border duration-200 hover:border-orange-800 py-4 rounded-lg ' + (type === fire ? 'border-orange-800' : 'border-orange-600')} key={typeIndex}>
                 <p className='capitalize'> {type.replaceAll('_', " ")} </p>
             </button>
+
             )
         })}
      </div>
@@ -48,7 +56,7 @@ export default function Generator() {
 
      <Header index={'02'} title="Unleash the fury" description="Select the muscles you want to set ablaze"/>
 
-     <div className='bg-slate-950 flex flex-col border border-solid border-orange-600 rounded-lg'>
+     <div className='bg-slate-950 flex flex-col border border-solid border-orange-600 hover:border-orange-800 rounded-lg'>
         {/*Code to add the dropdown */}
          <button onClick= {toggleModal} className='relative flex p-3 items-center justify-center'>
             <p>Select the dragon eggs to crack</p>
@@ -58,6 +66,26 @@ export default function Generator() {
             <div>modal</div>
          )}
      </div>
+
+    {/*--------------------------------------  HEADER 03------------------------------------------------------- */}
+
+     <Header index={'03'} title="Become a dragon warrior" description="Select the dragon you want to train"/>
+
+     <div className='grid  grid-cols-3  gap-4'>
+        {/*Code to add buttons using object mapping  */}
+
+        {Object.keys(SCHEMES).map((scheme, schemeIndex)=>{
+            return (
+
+                 <button onClick= {() => {
+                setFire(scheme)
+            }} className={'bg-slate-950 border duration-200 hover:border-orange-800 py-4 rounded-lg ' + (scheme === fire ? 'border-orange-800' : 'border-orange-600')} key={schemeIndex}>
+                <p className='capitalize'> {scheme.replaceAll('_', " ")} </p>
+            </button>
+            )
+        })}
+     </div>
+
 
      
 
