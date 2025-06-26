@@ -8,10 +8,10 @@ export default function Hero() {
             <p> IT'S TIME TO GET </p>
             <h1 className= 'uppercase font-semi text-4xl sm:test-5xl  md:text-6xl large:text-7xl'> FIRED <span className='text-orange-700 font-medium'> UP </span></h1>     {/* Add fire animation next to fired up later */}
         </div>
-      <p className='text-sm md:text-base font-medium'> I am insanely getting <span className='text-orange-700 font-medium'>fired up</span>, no one can stop me, I believe in myself and I am ready to tackle anything that comes in my way. It is <span className='text-orange-700 font-medium'>do or die</span> and I am definitely doing it.</p>
-      {/* Adding span will let us style the test inside span separately*/}
+        <p className='text-sm md:text-base font-medium'> I am insanely getting <span className='text-orange-700 font-medium'>fired up</span>, no one can stop me, I believe in myself and I am ready to tackle anything that comes in my way. It is <span className='text-orange-700 font-medium'>do or die</span> and I am definitely doing it.</p>
+        {/* Adding span will let us style the test inside span separately*/}
 
-      <Button text= 'Light the torch'/>
+        <Button text= {'Light the torch'}/>
     </div>
   )
 }

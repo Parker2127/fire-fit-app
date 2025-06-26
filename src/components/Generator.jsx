@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import SectionWrapper from './SectionWrapper'
 import { SCHEMES, WORKOUTS } from '../utils/fire'
+import Button from './Button'
 
 
 function Header(props){
@@ -16,13 +17,11 @@ function Header(props){
     )
 }
 
-export default function Generator() {
+export default function Generator(props) {
 
     const [showModal, setShowModal] = useState(false)
-    const [fire, setFire] = useState('individual')
-    const [muscles, setMuscles] = useState([])
-    const [goal, setGoal] = useState('strength_power')
 
+    const {fire, setFire, muscles, setMuscles, goal, setGoal} = props
 //   let showModal = false;
 
     function toggleModal(){
@@ -69,7 +68,7 @@ export default function Generator() {
                     <button onClick= {() => {
                         setMuscles([]) /*Resetting the array */
                         setFire(type)
-                    }} className={'bg-slate-950 border duration-200 hover:border-orange-800 py-4 rounded-lg ' + (type === fire ? 'border-orange-800' : 'border-orange-600')} key={typeIndex}>
+                    }} className={'bg-slate-950 border duration-200 hover:border-orange-800 px-4 py-4 rounded-lg ' + (type === fire ? 'border-orange-800' : 'border-orange-600')} key={typeIndex}>
                         <p className='capitalize'> {type.replaceAll('_', " ")} </p>
                     </button>
 
@@ -114,16 +113,15 @@ export default function Generator() {
 
                     <button onClick= {() => {
                     setGoal(scheme)
-                }} className={'bg-slate-950 border duration-200 hover:border-orange-800 py-4 rounded-lg ' + (scheme === goal ? 'border-orange-800' : 'border-orange-600')} key={schemeIndex}>
+                }} className={'bg-slate-950 border duration-200 hover:border-orange-800 px-4 py-4 rounded-lg ' + (scheme === goal ? 'border-orange-800' : 'border-orange-600')} key={schemeIndex}>
                     <p className='capitalize'> {scheme.replaceAll('_', " ")} </p>
                 </button>
                 )
             })}
         </div>
-
-
-        
+        <Button text = {"Ignite"}> </Button>
 
     </SectionWrapper>  /* Anything wrapped between the SectionWrapper component { parent tag } are considered to be children */
     )
     }
+s
