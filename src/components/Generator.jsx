@@ -67,6 +67,7 @@ export default function Generator() {
                 return (
                 
                     <button onClick= {() => {
+                        setMuscles([]) /*Resetting the array */
                         setFire(type)
                     }} className={'bg-slate-950 border duration-200 hover:border-orange-800 py-4 rounded-lg ' + (type === fire ? 'border-orange-800' : 'border-orange-600')} key={typeIndex}>
                         <p className='capitalize'> {type.replaceAll('_', " ")} </p>
@@ -83,7 +84,7 @@ export default function Generator() {
         <div className='bg-slate-950 flex flex-col border border-solid border-orange-600 hover:border-orange-800 rounded-lg'>
             {/*Code to add the dropdown */}
             <button onClick= {toggleModal} className='relative flex p-3 items-center justify-center'>
-                <p>Select the dragon eggs to crack</p>
+                <p className='capitalize'>{muscles.length ===0 ? 'Select the dragon eggs to crack'  : muscles.join(' ')}</p>
                 <i className="fa-solid absolute right-3 top-1/2  -translate-y-1/2 fa-caret-down"></i>
             </button>
             {showModal && (
