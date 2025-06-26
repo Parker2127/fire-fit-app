@@ -53,7 +53,7 @@ export default function Generator(props) {
     }
   
     return (
-    <SectionWrapper header={"generate your workout"} title= {['Enter', 'The', 'Dragon']}> {/* adding header for the use case of banners */}
+    <SectionWrapper id ="generate" header={"generate your workout"} title= {['Enter', 'The', 'Dragon']}> {/* adding header for the use case of banners */}
         
         {/*--------------------------------------  HEADER 01 ------------------------------------------------------- */}
 

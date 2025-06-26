@@ -11,7 +11,9 @@ export default function Hero() {
         <p className='text-sm md:text-base font-medium'> I am insanely getting <span className='text-orange-700 font-medium'>fired up</span>, no one can stop me, I believe in myself and I am ready to tackle anything that comes in my way. It is <span className='text-orange-700 font-medium'>do or die</span> and I am definitely doing it.</p>
         {/* Adding span will let us style the test inside span separately*/}
 
-        <Button text= {'Light the torch'}/>
+        <Button func={() => {
+            window.location.href = '#generate'
+            }} text= {'Light the torch'}/>
     </div>
   )
 }
