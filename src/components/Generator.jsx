@@ -21,7 +21,7 @@ export default function Generator(props) {
 
     const [showModal, setShowModal] = useState(false)
 
-    const {fire, setFire, muscles, setMuscles, goal, setGoal} = props
+    const {fire, setFire, muscles, setMuscles, goal, setGoal, updateWorkout} = props
 //   let showModal = false;
 
     function toggleModal(){
@@ -119,9 +119,8 @@ export default function Generator(props) {
                 )
             })}
         </div>
-        <Button text = {"Ignite"}> </Button>
+        <Button text = "Ignite" func={updateWorkout}> </Button>
 
     </SectionWrapper>  /* Anything wrapped between the SectionWrapper component { parent tag } are considered to be children */
     )
     }
-s
