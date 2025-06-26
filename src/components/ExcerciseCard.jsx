@@ -17,7 +17,11 @@ export default function ExcerciseCard(props) {
                 {exercise.type}
             </p>
         </div>
-     
+        <div className='flex flex-col'>
+            <h3 className='text-slate-400 text-sm'>Muscle Groups</h3>
+            <p className='capitalize'>{exercise.muscles.join(' & ')}</p>
+        </div>
+
     </div>
   )
 }
