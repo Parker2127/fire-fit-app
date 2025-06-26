@@ -2,7 +2,7 @@ import { EXERCISES, SCHEMES, TEMPOS, WORKOUTS } from "./fire"
 const exercises = exercisesFlattener(EXERCISES)
 
 export function generateWorkout(args) {
-    const { muscles, poison: workout, goal } = args
+    const { muscles, fire: workout, goal } = args
     let exer = Object.keys(exercises);
     exer = exer.filter((key) => exercises[key].meta.environment !== "home");
     let includedTracker = [];

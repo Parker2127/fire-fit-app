@@ -68,7 +68,7 @@ export default function Generator(props) {
                     <button onClick= {() => {
                         setMuscles([]) /*Resetting the array */
                         setFire(type)
-                    }} className={'bg-slate-950 border duration-200 hover:border-orange-800 px-4 py-4 rounded-lg ' + (type === fire ? 'border-orange-800' : 'border-orange-600')} key={typeIndex}>
+                    }} className={'bg-slate-950 border duration-200 hover:border-orange-600 px-4 py-4 rounded-lg ' + (type === fire ? 'border-orange-600' : 'border-orange-800')} key={typeIndex}>
                         <p className='capitalize'> {type.replaceAll('_', " ")} </p>
                     </button>
 
@@ -80,7 +80,7 @@ export default function Generator(props) {
 
         <Header index={'02'} title="Unleash the fury" description="Select the muscles you want to set ablaze"/>
 
-        <div className='bg-slate-950 flex flex-col border border-solid border-orange-600 hover:border-orange-800 rounded-lg'>
+        <div className='bg-slate-950 flex flex-col border border-solid border-orange-800 hover:border-orange-600 rounded-lg'>
             {/*Code to add the dropdown */}
             <button onClick= {toggleModal} className='relative flex p-3 items-center justify-center'>
                 <p className='capitalize'>{muscles.length ===0 ? 'Select the dragon eggs to crack'  : muscles.join(' ')}</p>
@@ -113,7 +113,7 @@ export default function Generator(props) {
 
                     <button onClick= {() => {
                     setGoal(scheme)
-                }} className={'bg-slate-950 border duration-200 hover:border-orange-800 px-4 py-4 rounded-lg ' + (scheme === goal ? 'border-orange-800' : 'border-orange-600')} key={schemeIndex}>
+                }} className={'bg-slate-950 border duration-200 hover:border-orange-600 px-4 py-4 rounded-lg ' + (scheme === goal ? 'border-orange-600' : 'border-orange-800')} key={schemeIndex}>
                     <p className='capitalize'> {scheme.replaceAll('_', " ")} </p>
                 </button>
                 )
