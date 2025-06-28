@@ -54,7 +54,7 @@ function App() {
   }
 
   /*--------------------------------------------Workout section smooth scrolling logic------------------------------------ */
-  
+
      // --- ADD THIS useEffect HOOK ---
     useEffect(() => {
     // This effect runs whenever the 'workout' state changes.
@@ -81,8 +81,13 @@ function App() {
     }
   }, [showGenerator]); // Dependency: Re-run effect when 'showGenerator' state changes
 
+
   /*--------------------------------------------Handling Light the Torch button click------------------------------------ */
   const handleLightTheTorchClick =  () => {
+    setShowGenerator(true);
+  }
+
+  const handleRekindleClick = () => {
     setShowGenerator(true);
   }
 
@@ -90,7 +95,7 @@ function App() {
     <main className='min-h-screen flex flex-col bg-gradient-to-r from-slate-800 to-slate-950 text-white text-sm sm:text-base'>
       <Hero onLightTheTorch = {handleLightTheTorchClick}/>
       <Generator fire={fire} setFire={setFire} muscles ={muscles} setMuscles={setMuscles} goal={goal} setGoal={setGoal} updateWorkout={updateWorkout}/>
-      {workout && (<Workout workout={workout}/>)}
+      {workout && (<Workout onRekindle= {handleRekindleClick} workout={workout}/>)}
     </main>
   )
 }
